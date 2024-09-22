@@ -1,0 +1,127 @@
+:root {
+	--bg-color: linear-gradient(90deg, #624E88, #CB80AB, #E6D9A2);
+	--side-color: linear-gradient(90deg, black, white, black);
+	--bg-font: 36px;
+	--text-color: linear-gradient(90deg, #E6D9A2, #CB80AB, #624E88);
+	--item-font: 'Courier New', Courier, monospace;
+	--item-font2: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	background-color: whitesmoke;
+}
+
+
+.animat__head {
+	background-image: var(--bg-color);
+	font-size: var(--bg-font);
+
+	padding: 16px;
+
+	display: flex;
+	justify-content: space-around;
+
+	background-size: 400%;
+	background-position: left;
+
+	animation: animBg 5s infinite alternate;
+}
+
+	
+
+
+  .animat__head a {
+	color: transparent;
+	text-decoration: none;
+	background-image: var(--text-color);
+	background-size: 400%;
+	background-position: left;
+	background-clip: text;
+	animation: animText 5s infinite alternate;
+
+}
+
+
+
+@keyframes animText {
+	0%{
+		background-position: left;
+	}
+
+	100%{
+		background-position: right;
+	}
+}
+
+@keyframes animBg  {
+	0%{
+		background-position: left;
+	}
+
+	100%{
+		background-position: right;
+	}
+}
+
+nav {
+	display: flex;
+}
+
+.side__title {
+	font-size: var(--bg-font);
+	padding: 24px 16px;
+}
+
+.side__bar{
+	height: 600px;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.side__bar a {
+	color: black;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+.side__bar a:hover {
+	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	color: transparent;
+	background-image: var(--side-color);
+	background-size: 400%;
+	background-position: left;
+	background-clip: text;
+	animation: animText 2s infinite alternate;
+}
+
+.grid__container{
+	flex: auto;
+	display: grid;
+	gap: 6px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	text-align: center;
+	align-items: center;
+
+}
+
+.item {
+	padding: 10px 50px;
+}
+
+.item3, .item5, .item7 {
+	font-family: var(--item-font);
+}
+
+.item1, .item9 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.item2, .item4, .item6, .item8 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

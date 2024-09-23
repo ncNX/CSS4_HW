@@ -1,22 +1,25 @@
 :root {
-	--bg-color: linear-gradient(90deg, #624E88, #CB80AB, #E6D9A2);
+	--bg-color: linear-gradient(90deg, #4D5D53, #4D5D53, #50C878, #00FA9A, #50C878, #4D5D53, #4D5D53);
 	--side-color: linear-gradient(90deg, black, white, black);
-	--bg-font: 36px;
-	--text-color: linear-gradient(90deg, #E6D9A2, #CB80AB, #624E88);
-	--item-font: 'Courier New', Courier, monospace;
-	--item-font2: Verdana, Geneva, Tahoma, sans-serif;
+	--bg-font: 52px;
+	--text-color: linear-gradient(90deg, #00FA9A, #50C878, #4D5D53, #4D5D53, #50C878, #00FA9A);
+	--item-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	--head-font: 'Times New Roman', Times, serif;
 }
 
 body {
-	background-color: whitesmoke;
+	box-sizing: border-box;
 }
 
 
 .animat__head {
 	background-image: var(--bg-color);
 	font-size: var(--bg-font);
+	font-family: var(--head-font);
+	font-weight: 700;
 
-	padding: 16px;
+	padding: 36px;
+	border-radius: 25px;
 
 	display: flex;
 	justify-content: space-around;
@@ -68,13 +71,17 @@ nav {
 }
 
 .side__title {
-	font-size: var(--bg-font);
-	padding: 24px 16px;
+	text-decoration: underline;
+	font-size: 36px;
+	margin: 30px 20px;
 }
 
 .side__bar{
-	height: 600px;
-	width: 200px;
+	border: 2px solid black;
+	border-radius: 25px;
+	margin-top: 24px;
+	height: 100%;
+	width: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -85,24 +92,27 @@ nav {
 	color: black;
 	text-decoration: none;
 	font-size: 28px;
+	padding: 32px 24px;
+
 }
 
 .side__bar a:hover {
 	color: black;
-	font-size: 30px;
+	font-size: 32px;
 	font-weight: 700;
 	color: transparent;
 	background-image: var(--side-color);
 	background-size: 400%;
 	background-position: left;
 	background-clip: text;
-	animation: animText 2s infinite alternate;
+	animation: animText 3s infinite alternate;
+	transition: all 1s ease;
 }
 
 .grid__container{
-	flex: auto;
+	gap: 32px;
+	margin: 24px auto;
 	display: grid;
-	gap: 6px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	text-align: center;
@@ -111,17 +121,65 @@ nav {
 }
 
 .item {
-	padding: 10px 50px;
+	border-radius: 10px;
+	height: 300px;
+	width: 380px;
+	cursor: pointer;
+
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.item3, .item5, .item7 {
+
+
+.item1 {
+	background-image: url(/vesela.jpg) ;
+
+}
+
+.item2 {
+	background-image: url(/bently.jpg);
+}
+
+.item3 {
+	background-image: url(/bmw.jpg);
+}
+
+.item4 {
+	background-image: url(/jaguar.jpg);
+}
+
+.item5 {
+	background-image: url(/lexus.jpg);
+}
+
+.item6 {
+	background-image: url(/mercedes.jpg);
+}
+
+.item7 {
+	background-image: url(/nissan.jpg);
+}
+
+.item8 {
+	background-image: url(/porche.jpg);
+}
+
+.item9 {
+	background-image: url(/subaru.jpg);
+}
+
+
+
+h2 {
+	color: white;
 	font-family: var(--item-font);
+	font-size: 36px;
 }
 
-.item1, .item9 {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+.item:hover h2 {
+	transition: all 2s ease;
+	font-size: 68px;
+
 }
 
-.item2, .item4, .item6, .item8 {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
